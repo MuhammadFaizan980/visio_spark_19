@@ -1,5 +1,6 @@
 package com.squadtechs.markhor.visiospark19.activities
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.view.WindowManager
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var received: FragmentReceived
     private lateinit var talked: FragmentTalked
     private lateinit var missed: FragmentMissed
+    private var currentSelected: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.setFlags(
@@ -34,13 +36,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initViews()
         startTransaction(dialed)
-        // populateViewPager()
         setTabListeners()
-        setCalendarListeners()
-    }
-
-    private fun setCalendarListeners() {
-
     }
 
     private fun setTabListeners() {
@@ -54,6 +50,7 @@ class MainActivity : AppCompatActivity() {
             txtTalked.setTextColor(Color.parseColor("#90424242"))
             txtMissed.setTextColor(Color.parseColor("#90424242"))
             startTransaction(dialed)
+            currentSelected = 0
         }
         txtReceived.setOnClickListener {
             txtDialed.textSize = 14.0f
@@ -65,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             txtTalked.setTextColor(Color.parseColor("#90424242"))
             txtMissed.setTextColor(Color.parseColor("#90424242"))
             startTransaction(received)
+            currentSelected = 1
         }
         txtTalked.setOnClickListener {
             txtDialed.textSize = 14.0f
@@ -76,6 +74,7 @@ class MainActivity : AppCompatActivity() {
             txtTalked.setTextColor(Color.parseColor("#000000"))
             txtMissed.setTextColor(Color.parseColor("#90424242"))
             startTransaction(talked)
+            currentSelected = 2
         }
         txtMissed.setOnClickListener {
             txtDialed.textSize = 14.0f
@@ -87,6 +86,7 @@ class MainActivity : AppCompatActivity() {
             txtTalked.setTextColor(Color.parseColor("#90424242"))
             txtMissed.setTextColor(Color.parseColor("#000000"))
             startTransaction(missed)
+            currentSelected = 3
         }
     }
 

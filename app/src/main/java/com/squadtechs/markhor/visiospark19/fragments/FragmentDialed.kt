@@ -7,7 +7,6 @@ import android.content.pm.PackageManager
 import android.database.Cursor
 import android.os.Bundle
 import android.provider.CallLog
-import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -103,6 +102,7 @@ class FragmentDialed() : Fragment() {
             obj.type = dir
             obj.date = callDayTime.toString()
             obj.duration = callDuration
+
             list.add(obj)
             adapter.notifyDataSetChanged()
         }

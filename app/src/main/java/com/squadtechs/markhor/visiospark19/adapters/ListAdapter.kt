@@ -1,5 +1,6 @@
 package com.squadtechs.markhor.visiospark19.adapters
 
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ class ListAdapter(
     private val key: Int
 ) :
     RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+    private var date: Int = 0
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder =
         MyViewHolder(
             LayoutInflater.from(parent.context).inflate(
@@ -29,7 +31,8 @@ class ListAdapter(
     override fun getItemViewType(position: Int): Int = position
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val obj = list[position]
+      val obj = list[position]
+        holder.txtCount.text = (position+1).toString()
         when (key) {
             0 -> {
                 if (obj.type == "OUTGOING") {
@@ -59,5 +62,6 @@ class ListAdapter(
     class MyViewHolder(mView: View) : RecyclerView.ViewHolder(mView) {
         val txtNumber: TextView = mView.findViewById(R.id.txt_number)
         val txtDuration: TextView = mView.findViewById(R.id.txt_duration)
+        val txtCount: TextView = mView.findViewById(R.id.txt_count)
     }
 }
