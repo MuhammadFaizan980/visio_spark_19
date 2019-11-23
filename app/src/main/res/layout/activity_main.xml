@@ -20,8 +20,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#90424242" />
+            android:layout_height="0.5dp"
+            android:background="@color/colorGrey2" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Dialed"
-                android:textColor="#000000"
+                android:textColor="@color/colorBlack"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Received"
-                android:textColor="#90424242"
+                android:textColor="@color/colorGrey2"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Talked"
-                android:textColor="#90424242"
+                android:textColor="@color/colorGrey2"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -71,7 +71,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="Missed"
-                android:textColor="#90424242"
+                android:textColor="@color/colorGrey2"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -79,8 +79,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#90424242" />
+            android:layout_height="0.5dp"
+            android:background="@color/colorGrey2" />
 
     </LinearLayout>
 
