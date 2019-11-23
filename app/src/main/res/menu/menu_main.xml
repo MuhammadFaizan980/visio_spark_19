@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_dialed"
+        android:icon="@drawable/ic_dialed"
+        android:title="Dialed" />
+    <item
+        android:id="@+id/item_received"
+        android:icon="@drawable/ic_received"
+        android:title="Received" />
+    <item
+        android:id="@+id/item_talked"
+        android:icon="@drawable/ic_talked"
+        android:title="Talked" />
+    <item
+        android:id="@+id/item_missed"
+        android:icon="@drawable/ic_missed"
+        android:title="Missed" />
+</menu>
