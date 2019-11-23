@@ -104,8 +104,9 @@ class FragmentDialed() : Fragment() {
             obj.duration = callDuration
 
             list.add(obj)
-            adapter.notifyDataSetChanged()
+
         }
+        adapter.notifyDataSetChanged()
     }
 
     private fun initViews() {
